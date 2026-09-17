@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import { initSocket } from "./controllers/councilController.js";
 import authRoutes from "./routes/authRoutes.js";
 import councilRoutes from "./routes/councilRoutes.js";
 
@@ -17,6 +18,7 @@ export const io = new Server(httpServer, {
     methods: ["GET", "POST"],
   },
 });
+initSocket(io);
 
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
