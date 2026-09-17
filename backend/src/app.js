@@ -28,7 +28,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/council", councilRoutes);
 
 app.get("/", (req, res) => {
-  res.json({ message: "CouncilAI API funzionante ✅" });
+  res.json({ message: "CouncilAI API funzionante " });
 });
 
 app.use((err, req, res, next) => {
