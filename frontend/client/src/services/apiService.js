@@ -31,7 +31,6 @@ export const loginUser = async (email, password) => {
   return data;
 };
 
-// COUNCIL
 export const startSession = async (problema) => {
   const res = await fetch(`${BASE_URL}/council/start`, {
     method: "POST",
