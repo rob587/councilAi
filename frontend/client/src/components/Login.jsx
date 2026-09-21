@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { loginUser } from "../services/apiService";
 import { useAuth } from "../context/AuthContext";
+import { motion } from "framer-motion";
 
 const Login = ({ onSwitch }) => {
   const { login } = useAuth();
