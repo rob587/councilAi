@@ -27,30 +27,101 @@ const Login = ({ onSwitch }) => {
   };
   return (
     <>
-      <div className="min-h-screen bg-gray-950 flex items-center justify-center p-6">
-        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 w-full max-w-md">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-violet-400 mb-2">
-              CouncilAi
+      <div
+        style={{
+          minHeight: "100vh",
+          background:
+            "linear-gradient(135deg, #0d0d1a 0%, #111827 50%, #0d0d1a 100%)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "24px",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 150, damping: 20 }}
+          style={{
+            background: "rgba(255,255,255,0.03)",
+            border: "1px solid rgba(139,92,246,0.25)",
+            backdropFilter: "blur(20px)",
+            borderRadius: "24px",
+            padding: "40px",
+            width: "100%",
+            maxWidth: "420px",
+          }}
+        >
+          <div style={{ textAlign: "center", marginBottom: "32px" }}>
+            <motion.div
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 4, repeat: Infinity }}
+              style={{ fontSize: "3rem", marginBottom: "12px" }}
+            >
+              🧬
+            </motion.div>
+            <h1
+              style={{
+                background: "linear-gradient(135deg, #a78bfa, #7c3aed)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: "700",
+                fontSize: "1.8rem",
+                margin: "0 0 8px",
+              }}
+            >
+              CouncilAI
             </h1>
-            <p className="text-gray-500 text-sm">Accedi al tuo account</p>
+            <p style={{ color: "#6b7280", fontSize: "0.9rem", margin: 0 }}>
+              Accedi al tuo account
+            </p>
           </div>
 
           {error && (
-            <div className="bg-red-900/30 border border-red-500/40 text-red-400 rounded-lg px-4 py-3 text-sm mb-6 flex justify-between items-center">
+            <div
+              style={{
+                background: "rgba(239,68,68,0.1)",
+                border: "1px solid rgba(239,68,68,0.3)",
+                borderRadius: "12px",
+                padding: "12px 16px",
+                color: "#ef4444",
+                fontSize: "0.875rem",
+                marginBottom: "20px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               {error}
               <button
                 onClick={() => setError(null)}
-                className="ml-2 hover:text-red-300"
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "#ef4444",
+                  cursor: "pointer",
+                }}
               >
                 ✕
               </button>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+          >
             <div>
-              <label className="block text-gray-400 text-sm mb-1">Email</label>
+              <label
+                style={{
+                  display: "block",
+                  color: "#9ca3af",
+                  fontSize: "0.85rem",
+                  marginBottom: "8px",
+                }}
+              >
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -58,12 +129,34 @@ const Login = ({ onSwitch }) => {
                 onChange={handleChange}
                 placeholder="la@tua.email"
                 required
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2.5 text-gray-100 text-sm focus:outline-none focus:border-violet-500"
+                style={{
+                  width: "100%",
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(139,92,246,0.25)",
+                  borderRadius: "12px",
+                  padding: "12px 16px",
+                  color: "#f3f4f6",
+                  fontSize: "0.95rem",
+                  outline: "none",
+                  boxSizing: "border-box",
+                  transition: "border-color 0.2s",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = "#7c3aed")}
+                onBlur={(e) =>
+                  (e.target.style.borderColor = "rgba(139,92,246,0.25)")
+                }
               />
             </div>
 
             <div>
-              <label className="block text-gray-400 text-sm mb-1">
+              <label
+                style={{
+                  display: "block",
+                  color: "#9ca3af",
+                  fontSize: "0.85rem",
+                  marginBottom: "8px",
+                }}
+              >
                 Password
               </label>
               <input
@@ -73,29 +166,65 @@ const Login = ({ onSwitch }) => {
                 onChange={handleChange}
                 placeholder="••••••••"
                 required
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2.5 text-gray-100 text-sm focus:outline-none focus:border-violet-500"
+                style={{
+                  width: "100%",
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(139,92,246,0.25)",
+                  borderRadius: "12px",
+                  padding: "12px 16px",
+                  color: "#f3f4f6",
+                  fontSize: "0.95rem",
+                  outline: "none",
+                  boxSizing: "border-box",
+                  transition: "border-color 0.2s",
+                }}
+                onFocus={(e) => (e.target.style.borderColor = "#7c3aed")}
+                onBlur={(e) =>
+                  (e.target.style.borderColor = "rgba(139,92,246,0.25)")
+                }
               />
             </div>
 
-            <button
+            <motion.button
               type="submit"
               disabled={loading}
-              className="w-full bg-violet-600 hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg transition-all mt-2"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              style={{
+                background: loading
+                  ? "rgba(124,58,237,0.4)"
+                  : "linear-gradient(135deg, #7c3aed, #6d28d9)",
+                border: "none",
+                borderRadius: "12px",
+                padding: "14px",
+                color: "white",
+                fontWeight: "600",
+                fontSize: "1rem",
+                cursor: loading ? "not-allowed" : "pointer",
+                marginTop: "8px",
+              }}
             >
               {loading ? "Accesso in corso..." : "Accedi"}
-            </button>
+            </motion.button>
           </form>
 
-          <p className="text-center text-gray-500 text-sm mt-6">
+          <p
+            style={{
+              textAlign: "center",
+              color: "#6b7280",
+              fontSize: "0.875rem",
+              marginTop: "24px",
+            }}
+          >
             Non hai un account?{" "}
             <span
               onClick={onSwitch}
-              className="text-violet-400 cursor-pointer hover:underline font-medium"
+              style={{ color: "#a78bfa", cursor: "pointer", fontWeight: "600" }}
             >
               Registrati
             </span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </>
   );
