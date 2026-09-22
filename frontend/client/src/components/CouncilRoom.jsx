@@ -5,35 +5,47 @@ import { startSession } from "../services/apiService";
 import MessageStream from "./MessageStream";
 
 const PSICOLOGI_CONFIG = {
-  oggettivo: {
-    nome: "L'Oggettivo",
-    emoji: "🎯",
-    colore: "#38bdf8",
-    descrizione: "Analisi dei fatti puri",
+  superbia: {
+    nome: "Superbia",
+    emoji: "👑",
+    colore: "#f59e0b",
+    descrizione: "Il primo e più grande dei peccati",
   },
-  soggettivo: {
-    nome: "Il Soggettivo",
-    emoji: "💭",
-    colore: "#a78bfa",
-    descrizione: "La percezione personale e il vissuto",
+  accidia: {
+    nome: "Accidia",
+    emoji: "🌑",
+    colore: "#6b7280",
+    descrizione: "Il peccato del non agire",
   },
-  egoista: {
-    nome: "L'Egoista",
-    emoji: "😈",
-    colore: "#f87171",
-    descrizione: "Il tuo interesse personale",
+  avarizia: {
+    nome: "Avarizia",
+    emoji: "💰",
+    colore: "#84cc16",
+    descrizione: "Il peccato del trattenere",
   },
-  altruista: {
-    nome: "L'Altruista",
-    emoji: "❤️",
-    colore: "#34d399",
-    descrizione: "L'impatto sugli altri e l'empatia",
+  ira: {
+    nome: "Ira",
+    emoji: "🔥",
+    colore: "#ef4444",
+    descrizione: "Il peccato della fiamma che brucia",
   },
-  critico: {
-    nome: "Il Critico",
-    emoji: "⚖️",
-    colore: "#fbbf24",
-    descrizione: "Mette in discussione e trova contraddizioni",
+  gola: {
+    nome: "Gola",
+    emoji: "🍷",
+    colore: "#8b5cf6",
+    descrizione: "Il peccato dell'eccesso e del desiderio",
+  },
+  invidia: {
+    nome: "Invidia",
+    emoji: "🐍",
+    colore: "#10b981",
+    descrizione: "Il peccato dello sguardo che consuma",
+  },
+  lussuria: {
+    nome: "Lussuria",
+    emoji: "🌹",
+    colore: "#f43f5e",
+    descrizione: "Il peccato del desiderio che non si nomina",
   },
 };
 
