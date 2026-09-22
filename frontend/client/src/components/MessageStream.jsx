@@ -1,35 +1,35 @@
 import { motion, AnimatePresence } from "framer-motion";
 
 const PSICOLOGI_CONFIG = {
-  cognitivo: {
-    nome: "Dr. Cognitive",
-    emoji: "🧠",
+  oggettivo: {
+    nome: "L'Oggettivo",
+    emoji: "🎯",
     colore: "#38bdf8",
-    descrizione: "Approccio Cognitivo-Comportamentale",
+    descrizione: "Analisi dei fatti puri",
   },
-  junghiano: {
-    nome: "Dr. Jung",
+  soggettivo: {
+    nome: "Il Soggettivo",
     emoji: "💭",
     colore: "#a78bfa",
-    descrizione: "Approccio Junghiano",
+    descrizione: "La percezione personale e il vissuto",
   },
-  umanista: {
-    nome: "Dr. Rogers",
+  egoista: {
+    nome: "L'Egoista",
+    emoji: "😈",
+    colore: "#f87171",
+    descrizione: "Il tuo interesse personale",
+  },
+  altruista: {
+    nome: "L'Altruista",
     emoji: "❤️",
     colore: "#34d399",
-    descrizione: "Approccio Umanistico",
+    descrizione: "L'impatto sugli altri e l'empatia",
   },
-  comportamentista: {
-    nome: "Dr. Skinner",
-    emoji: "🔬",
+  critico: {
+    nome: "Il Critico",
+    emoji: "⚖️",
     colore: "#fbbf24",
-    descrizione: "Approccio Comportamentale",
-  },
-  mindfulness: {
-    nome: "Dr. Kabat",
-    emoji: "🌿",
-    colore: "#fb923c",
-    descrizione: "Approccio Mindfulness",
+    descrizione: "Mette in discussione e trova contraddizioni",
   },
 };
 

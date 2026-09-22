@@ -5,35 +5,35 @@ import { startSession } from "../services/apiService";
 import MessageStream from "./MessageStream";
 
 const PSICOLOGI_CONFIG = {
-  cognitivo: {
-    nome: "Dr. Cognitive",
-
+  oggettivo: {
+    nome: "L'Oggettivo",
+    emoji: "🎯",
     colore: "#38bdf8",
-    descrizione: "Cognitivo-Comportamentale",
+    descrizione: "Analisi dei fatti puri",
   },
-  junghiano: {
-    nome: "Dr. Jung",
-
+  soggettivo: {
+    nome: "Il Soggettivo",
+    emoji: "💭",
     colore: "#a78bfa",
-    descrizione: "Junghiano",
+    descrizione: "La percezione personale e il vissuto",
   },
-  umanista: {
-    nome: "Dr. Rogers",
-
+  egoista: {
+    nome: "L'Egoista",
+    emoji: "😈",
+    colore: "#f87171",
+    descrizione: "Il tuo interesse personale",
+  },
+  altruista: {
+    nome: "L'Altruista",
+    emoji: "❤️",
     colore: "#34d399",
-    descrizione: "Umanistico",
+    descrizione: "L'impatto sugli altri e l'empatia",
   },
-  comportamentista: {
-    nome: "Dr. Skinner",
-
+  critico: {
+    nome: "Il Critico",
+    emoji: "⚖️",
     colore: "#fbbf24",
-    descrizione: "Comportamentale",
-  },
-  mindfulness: {
-    nome: "Dr. Kabat",
-
-    colore: "#fb923c",
-    descrizione: "Mindfulness",
+    descrizione: "Mette in discussione e trova contraddizioni",
   },
 };
 
